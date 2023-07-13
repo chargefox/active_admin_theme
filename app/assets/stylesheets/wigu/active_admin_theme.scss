@@ -1,21 +1,23 @@
 //VAR-----------------------------------------------------------------------------------------------------------------//
 
-$skinMainFirstColor: #23282f!default;
-$skinMainSecondColor: #5ea3d3!default;
-$skinBorderRadius: 4px!default;
-$skinBorderWindowColor: #e6e9ee!default;
-$skinTablePadding: 10px!default;
+$skinMainFirstColor: #23282f !default;
+$skinMainSecondColor: #5ea3d3 !default;
+$skinBorderRadius: 4px !default;
+$skinBorderWindowColor: #e6e9ee !default;
+$skinTablePadding: 10px !default;
 //HTML----------------------------------------------------------------------------------------------------------------//
 
 html {
   background: #f7f9fb;
 }
+
 body.active_admin {
   background: #f7f9fb;
 }
+
 #wrapper {
   div.tabs {
-    > ul > li > a {
+    >ul>li>a {
       background-image: none;
       box-shadow: none;
       text-shadow: none;
@@ -42,12 +44,14 @@ body.active_admin {
       -moz-border-radius-bottomright: 0;
       border-bottom-right-radius: 0;
     }
-    ul > li.ui-state-active > a {
+
+    ul>li.ui-state-active>a {
       background-color: #ffffff;
       border: 1px solid $skinBorderWindowColor;
       border-bottom: 0;
       color: $skinMainSecondColor;
     }
+
     div.tab-content {
       background-color: #ffffff;
       border: 1px solid $skinBorderWindowColor;
@@ -55,40 +59,53 @@ body.active_admin {
       @include rounded($skinBorderRadius);
     }
   }
+
   #header {
     background-color: $skinMainFirstColor;
-    border-bottom: 1px solid lighten( $skinMainFirstColor, 15% )!important;
+    border-bottom: 1px solid lighten($skinMainFirstColor, 15%) !important;
     padding-bottom: 9px;
     border: none;
     text-shadow: none;
     background-image: none;
+
     h1.site_title {
       color: $skinMainSecondColor;
       font-size: 16px;
     }
-    a, a:link {
+
+    a,
+    a:link {
       color: #ffffff;
     }
-    ul.tabs > li > a {
+
+    ul.tabs>li>a {
       color: #ffffff;
       @include rounded($skinBorderRadius);
       padding: 6px 10px 6px 10px;
     }
-    ul.tabs > li.current > a, ul.tabs > li:hover > a {
+
+    ul.tabs>li.current>a,
+    ul.tabs>li:hover>a {
       background-color: $skinMainSecondColor;
     }
+
     ul.tabs {
       li.has_nested {
         a {
           padding-right: 20px;
         }
+
         ul {
+          box-shadow: none;
           background-color: $skinMainSecondColor;
           @include rounded($skinBorderRadius);
-          li > a {
+
+          li>a {
             padding-left: 15px;
           }
-          li.current > a::before, li:hover > a::before {
+
+          li.current>a::before,
+          li:hover>a::before {
             content: '';
             display: block;
             width: 7px;
@@ -101,6 +118,7 @@ body.active_admin {
           }
         }
       }
+
       li.has_nested:hover {
         a {
           border-bottom: 7px solid $skinMainSecondColor;
@@ -108,28 +126,44 @@ body.active_admin {
       }
     }
   }
+
   #title_bar {
     background-image: none;
     border: none;
     box-shadow: none;
-    background-color: lighten( $skinMainFirstColor, 8% );
+    background-color: lighten($skinMainFirstColor, 8%);
     border: none;
     border-bottom: 3px solid $skinMainSecondColor;
+
     #titlebar_left {
+      width: 400px;
+
       span.breadcrumb {
         font-size: 12px;
         text-shadow: none;
         margin-bottom: 8px;
-        a, span {
-          color: lighten( $skinMainFirstColor, 30% )!important; ;
+
+        a,
+        span {
+          color: lighten($skinMainFirstColor, 30%) !important;
+          ;
         }
       }
+
       h2 {
         color: #ffffff;
         text-shadow: none;
       }
     }
+
     #titlebar_right {
+      .action_items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: flex-end;
+      }
+
       .action_item a {
         background-image: none;
         border: none;
@@ -141,10 +175,12 @@ body.active_admin {
         padding: 10px 20px;
         color: #ffffff;
         font-weight: 600;
+
         &:hover {
-          background-color: lighten( $skinMainSecondColor, 5% )!important;
+          background-color: lighten($skinMainSecondColor, 5%) !important;
         }
       }
+
       div.dropdown_menu {
         div.dropdown_menu_list_wrapper {
           background-color: $skinMainFirstColor;
@@ -152,16 +188,22 @@ body.active_admin {
           background-image: none;
           border: none;
           box-shadow: none;
-          div.dropdown_menu_nipple, div.dropdown_menu_nipple:after, div.dropdown_menu_nipple:before {
+
+          div.dropdown_menu_nipple,
+          div.dropdown_menu_nipple:after,
+          div.dropdown_menu_nipple:before {
             border-color: $skinMainFirstColor transparent;
           }
+
           ul.dropdown_menu_list {
             box-shadow: none;
+
             li {
               a {
                 background-color: #ffffff;
                 color: $skinMainFirstColor;
                 border-radius: 0;
+
                 &:hover {
                   background-color: $skinMainSecondColor;
                   color: #ffffff;
@@ -171,6 +213,7 @@ body.active_admin {
           }
         }
       }
+
       div.batch_actions_selector {
         a {
           background-image: none;
@@ -181,13 +224,15 @@ body.active_admin {
           border: none;
           padding: 10px 20px;
           color: #ffffff;
+
           &:hover {
-            background-color: lighten( $skinMainSecondColor, 5% );
+            background-color: lighten($skinMainSecondColor, 5%);
           }
         }
       }
     }
   }
+
   .flashes {
     .flash {
       color: #ffffff;
@@ -199,23 +244,28 @@ body.active_admin {
       background-color: #669148;
       border-bottom: 2px solid #4C7331;
     }
+
     .flash_warning {
       background-color: #BDBC45;
       border-bottom: 2px solid #8B8A3D;
     }
+
     .flash_error {
       background-color: #CD3333;
       border-bottom: 2px solid #962F2F;
     }
   }
+
   #active_admin_content {
     span.blank_slate {
-      border: 2px solid lighten( $skinMainSecondColor, 30% );
+      border: 2px solid lighten($skinMainSecondColor, 30%);
       color: #8494a8;
       @include rounded($skinBorderRadius);
     }
+
     div.table_tools {
       margin-bottom: 35px;
+
       div.dropdown_menu {
         div.dropdown_menu_list_wrapper {
           background-color: $skinMainFirstColor;
@@ -223,16 +273,22 @@ body.active_admin {
           background-image: none;
           border: none;
           box-shadow: none;
-          div.dropdown_menu_nipple, div.dropdown_menu_nipple:after, div.dropdown_menu_nipple:before {
+
+          div.dropdown_menu_nipple,
+          div.dropdown_menu_nipple:after,
+          div.dropdown_menu_nipple:before {
             border-color: $skinMainFirstColor transparent;
           }
+
           ul.dropdown_menu_list {
             box-shadow: none;
+
             li {
               a {
                 background-color: #ffffff;
                 color: $skinMainFirstColor;
                 border-radius: 0;
+
                 &:hover {
                   background-color: $skinMainSecondColor;
                   color: #ffffff;
@@ -242,6 +298,7 @@ body.active_admin {
           }
         }
       }
+
       div.batch_actions_selector {
         a {
           background-image: none;
@@ -252,21 +309,28 @@ body.active_admin {
           border: none;
           padding: 10px 20px;
           color: #ffffff;
+
           &:hover {
-            background-color: lighten( $skinMainSecondColor, 5% );
+            background-color: lighten($skinMainSecondColor, 5%);
           }
         }
       }
+
       div.dropdown_menu {
         div.dropdown_menu_list_wrapper {
           background-color: $skinMainFirstColor;
           border: none;
           background-image: none;
-          div.dropdown_menu_nipple, div.dropdown_menu_nipple:after, div.dropdown_menu_nipple:before {
+
+          div.dropdown_menu_nipple,
+          div.dropdown_menu_nipple:after,
+          div.dropdown_menu_nipple:before {
             border-color: $skinMainFirstColor transparent;
           }
+
           ul.dropdown_menu_list {
             box-shadow: none;
+
             li {
               a {
                 background-color: #ffffff;
@@ -274,6 +338,7 @@ body.active_admin {
                 color: $skinMainFirstColor;
                 border-radius: 0;
                 text-shadow: none;
+
                 &:hover {
                   background-color: $skinMainSecondColor;
                   color: #ffffff;
@@ -283,6 +348,7 @@ body.active_admin {
           }
         }
       }
+
       div.batch_actions_selector {
         a {
           background-image: none;
@@ -293,13 +359,16 @@ body.active_admin {
           color: #ffffff;
           text-shadow: none;
           box-shadow: none;
+
           &:hover {
-            background-color: lighten( $skinMainSecondColor, 5% );
+            background-color: lighten($skinMainSecondColor, 5%);
             box-shadow: none;
           }
         }
       }
-      ul.scopes, div.scopes > ul {
+
+      ul.scopes,
+      div.scopes>ul {
         li {
           a {
             background-image: none;
@@ -310,6 +379,7 @@ body.active_admin {
             color: #ffffff;
             text-shadow: none;
             border-right: 1px solid #ffffff;
+
             span {
               color: #ffffff;
               font-size: 11px;
@@ -317,6 +387,7 @@ body.active_admin {
             }
           }
         }
+
         li:first-child {
           a {
             -webkit-border-top-left-radius: $skinBorderRadius;
@@ -327,6 +398,7 @@ body.active_admin {
             border-bottom-left-radius: $skinBorderRadius;
           }
         }
+
         li:last-child {
           a {
             -webkit-border-top-right-radius: $skinBorderRadius;
@@ -337,19 +409,22 @@ body.active_admin {
             border-bottom-right-radius: $skinBorderRadius;
           }
         }
+
         li.selected {
           a {
-            background-color: lighten( $skinMainSecondColor, 15% );
+            background-color: lighten($skinMainSecondColor, 15%);
           }
         }
       }
     }
   }
+
   table.index_table {
     background-color: #ffffff;
     border: 1px solid $skinBorderWindowColor;
     border-bottom: 2px solid $skinBorderWindowColor;
     @include rounded($skinBorderRadius);
+
     th {
       background-image: none;
       border: none;
@@ -359,34 +434,39 @@ body.active_admin {
       font-weight: bold;
       background-color: $skinBorderWindowColor;
       padding: $skinTablePadding 12px $skinTablePadding 12px;
-      border-bottom: 3px solid darken( $skinBorderWindowColor, 5% );
-      border-right: 1px solid darken( $skinBorderWindowColor, 5% );
+      border-right: 1px solid darken($skinBorderWindowColor, 5%);
+
       a {
         font-size: 1.0em;
-        font-weight: bold!important;
+        font-weight: bold !important;
       }
     }
+
     th.col-selectable {
       width: 12px;
     }
+
     th.sorted-desc {
       background-color: $skinBorderWindowColor;
     }
+
     td {
       padding: $skinTablePadding 12px $skinTablePadding 12px;
     }
   }
+
   .sidebar_section.panel {
     background-image: none;
     box-shadow: none;
     background-color: #ffffff;
     border: 1px solid $skinBorderWindowColor;
     border-bottom: 2px solid $skinBorderWindowColor;
-    & > h3 {
+
+    &>h3 {
       background-image: none;
       box-shadow: none;
       text-shadow: none;
-      background-color: $skinMainSecondColor;
+      background-color: $skinMainFirstColor;
       color: #ffffff;
       border: none;
       padding: 8px 15px;
@@ -399,28 +479,38 @@ body.active_admin {
       border-top-left-radius: $skinBorderRadius;
       border-top-right-radius: $skinBorderRadius;
     }
+
     .filter_form_field {
       label {
         color: #8494a8;
       }
+
       input {
         border: 1px solid #e6e9ee;
         background-color: #fdfefe;
       }
+
       input:focus {
-        border-color: lighten( $skinMainSecondColor, 20% ) ;
+        border-color: lighten($skinMainSecondColor, 20%);
         box-shadow: none;
       }
     }
   }
 }
-form fieldset > ol > li fieldset.fragments ol {
+
+form fieldset>ol>li fieldset.fragments ol {
   margin-left: 20%;
 }
-form fieldset ol > li.has_many_container h3 {
+
+form fieldset ol>li.has_many_container h3 {
   color: #8494a8;
 }
-form input[type=submit], a.button, a:link.button, a:visited.button, fieldset.actions > ol > li.button_action > button {
+
+form input[type=submit],
+a.button,
+a:link.button,
+a:visited.button,
+fieldset.actions>ol>li.button_action>button {
   background-image: none;
   box-shadow: none;
   text-shadow: none;
@@ -429,12 +519,16 @@ form input[type=submit], a.button, a:link.button, a:visited.button, fieldset.act
   border: none;
   padding: 10px 20px;
   color: #ffffff;
+
   &:hover {
-    background-image: none!important;
-    background-color: lighten( $skinMainSecondColor, 5% )!important;
+    background-image: none !important;
+    background-color: lighten($skinMainSecondColor, 5%) !important;
   }
 }
-form fieldset.buttons li.cancel a, form fieldset.actions li.cancel a, form.filter_form a.clear_filters_btn {
+
+form fieldset.buttons li.cancel a,
+form fieldset.actions li.cancel a,
+form.filter_form a.clear_filters_btn {
   background-image: none;
   box-shadow: none;
   text-shadow: none;
@@ -442,11 +536,13 @@ form fieldset.buttons li.cancel a, form fieldset.actions li.cancel a, form.filte
   @include rounded($skinBorderRadius);
   padding: 9px 20px 9px 20px;
   border-color: #E4E4E4;
+
   &:hover {
-    background-image: none!important;
-    background-color: #F4F4F4!important;
+    background-image: none !important;
+    background-color: #F4F4F4 !important;
   }
 }
+
 form fieldset.inputs {
   background-image: none;
   box-shadow: none;
@@ -455,13 +551,14 @@ form fieldset.inputs {
   background-color: #ffffff;
   border: 1px solid #e6e9ee;
   border-bottom: 2px solid #e6e9ee;
+
   legend {
     span {
       background-image: none;
       box-shadow: none;
       text-shadow: none;
       box-shadow: none;
-      background-color: $skinMainSecondColor;
+      background-color: $skinMainFirstColor;
       color: #ffffff;
       border: none;
       padding: 8px 15px;
@@ -475,30 +572,38 @@ form fieldset.inputs {
       border-top-right-radius: $skinBorderRadius;
     }
   }
-  ol > li {
+
+  ol>li {
     label {
       color: #8494a8;
     }
-    input, textarea {
+
+    input,
+    textarea {
       border: 1px solid #e6e9ee;
       background-color: #fdfefe;
     }
-    input:focus, textarea:focus {
-      border-color: lighten( $skinMainSecondColor, 20% ) ;
+
+    input:focus,
+    textarea:focus {
+      border-color: lighten($skinMainSecondColor, 20%);
       box-shadow: none;
     }
   }
 }
+
 #ui-datepicker-div {
   background: none;
   background-color: none;
   box-shadow: none;
   text-shadow: none;
   box-shadow: none;
+
   div.ui-datepicker-header {
     background-image: none;
     background-color: $skinMainSecondColor;
     border-bottom: none;
+
     div.ui-datepicker-title {
       span {
         background-image: none;
@@ -508,19 +613,23 @@ form fieldset.inputs {
       }
     }
   }
+
   div.ui-datepicker-header:before {
     border-bottom: 10px solid $skinMainSecondColor;
   }
+
   table.ui-datepicker-calendar {
     background-color: #ffffff;
     border-color: $skinMainSecondColor;
+
     thead {
       tr {
         th {
-          background-color:lighten( $skinMainSecondColor, 20% );
+          background-color: lighten($skinMainSecondColor, 20%);
         }
       }
     }
+
     tbody {
       tr {
         td {
@@ -529,7 +638,8 @@ form fieldset.inputs {
             color: #ffffff;
           }
         }
-        td.ui-datepicker-today > a {
+
+        td.ui-datepicker-today>a {
           background-color: $skinMainSecondColor;
           color: #ffffff;
         }
@@ -537,6 +647,7 @@ form fieldset.inputs {
     }
   }
 }
+
 .panel {
   background-image: none;
   box-shadow: none;
@@ -545,40 +656,47 @@ form fieldset.inputs {
   background-color: #ffffff;
   border: 1px solid $skinBorderWindowColor;
   border-bottom: 2px solid $skinBorderWindowColor;
-  > h3 {
-     background-image: none;
-     box-shadow: none;
-     text-shadow: none;
-     box-shadow: none;
-     background-color: $skinMainSecondColor;
-     color: #ffffff;
-     border: none;
-     padding: 8px 15px;
-     margin-top: 0;
-     font-weight: 400;
 
-     -webkit-border-top-left-radius: $skinBorderRadius;
-     -webkit-border-top-right-radius: $skinBorderRadius;
-     -moz-border-radius-topleft: $skinBorderRadius;
-     -moz-border-radius-topright: $skinBorderRadius;
-     border-top-left-radius: $skinBorderRadius;
-     border-top-right-radius: $skinBorderRadius;
+  >h3 {
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    box-shadow: none;
+    background-color: $skinMainFirstColor;
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 0;
+    font-weight: 400;
+
+    -webkit-border-top-left-radius: $skinBorderRadius;
+    -webkit-border-top-right-radius: $skinBorderRadius;
+    -moz-border-radius-topleft: $skinBorderRadius;
+    -moz-border-radius-topright: $skinBorderRadius;
+    border-top-left-radius: $skinBorderRadius;
+    border-top-right-radius: $skinBorderRadius;
   }
+
   .panel_contents {
     font-weight: 400;
   }
 }
-.attributes_table table th, .attributes_table table td {
+
+.attributes_table table th,
+.attributes_table table td {
   padding: 10px 0;
 }
+
 .attributes_table table th {
-    color: #8494a8;
+  color: #8494a8;
 }
+
 .comments form.active_admin_comment fieldset.inputs {
   border: none
 }
+
 .pagination {
-  span > a {
+  span>a {
     background-image: none;
     box-shadow: none;
     text-shadow: none;
@@ -587,12 +705,14 @@ form fieldset.inputs {
     background-color: $skinBorderWindowColor;
     @include rounded($skinBorderRadius);
     padding: 5px 10px;
+
     &:hover {
-      background-image: none!important;
-      background-color: $skinMainSecondColor!important;
+      background-image: none !important;
+      background-color: $skinMainSecondColor !important;
       color: #ffffff;
     }
   }
+
   span.page.current {
     background-image: none;
     box-shadow: none;
@@ -603,12 +723,14 @@ form fieldset.inputs {
     padding: 5px 10px;
     @include rounded($skinBorderRadius);
     cursor: pointer;
+
     &:hover {
-      background-image: none!important;
-      background-color: $skinMainSecondColor!important;
+      background-image: none !important;
+      background-color: $skinMainSecondColor !important;
     }
   }
 }
+
 body.logged_out #content_wrapper #active_admin_content {
   background-image: none;
   box-shadow: none;
@@ -619,6 +741,7 @@ body.logged_out #content_wrapper #active_admin_content {
   background-color: #ffffff;
   border: 1px solid $skinBorderWindowColor;
   border-bottom: 2px solid $skinBorderWindowColor;
+
   #login {
     h2 {
       background-image: none;
@@ -639,9 +762,11 @@ body.logged_out #content_wrapper #active_admin_content {
       border-top-right-radius: $skinBorderRadius;
 
     }
+
     form {
       fieldset {
         border: none;
+
         ol {
           li {
             label {
@@ -653,16 +778,26 @@ body.logged_out #content_wrapper #active_admin_content {
     }
   }
 }
-form input[type=text], form input[type=password], form input[type=email], form input[type=number], form input[type=url], form input[type=tel], form textarea {
+
+form input[type=text],
+form input[type=password],
+form input[type=email],
+form input[type=number],
+form input[type=url],
+form input[type=tel],
+form textarea {
   border: 1px solid #e6e9ee;
   background-color: #fdfefe;
 }
-form fieldset > ol > li fieldset ol li {
+
+form fieldset>ol>li fieldset ol li {
   clear: both;
+
   select {
     margin-top: 6px
   }
 }
+
 .ui-dialog {
   background-image: none;
   box-shadow: none;
@@ -670,6 +805,7 @@ form fieldset > ol > li fieldset ol li {
   box-shadow: none;
   background-color: #ffffff;
   border-bottom: 2px solid $skinBorderWindowColor;
+
   .ui-dialog-titlebar {
     background-image: none;
     box-shadow: none;
@@ -688,6 +824,7 @@ form fieldset > ol > li fieldset ol li {
     border-top-left-radius: $skinBorderRadius;
     border-top-right-radius: $skinBorderRadius;
   }
+
   form {
     ul {
       li {
@@ -695,21 +832,27 @@ form fieldset > ol > li fieldset ol li {
           display: block;
           margin-bottom: 5px;
         }
-        input[type="text"], input[type="number"], input[type="datepicker"], textarea {
+
+        input[type="text"],
+        input[type="number"],
+        input[type="datepicker"],
+        textarea {
           padding: 8px 10px 7px;
           border: 1px solid #e6e9ee;
           background-color: #fdfefe;
           outline: none;
           @include rounded($skinBorderRadius);
           width: 247px;
+
           &:focus {
-            border-color: lighten( $skinMainSecondColor, 20% ) ;
+            border-color: lighten($skinMainSecondColor, 20%);
             box-shadow: none;
           }
         }
       }
     }
   }
+
   .ui-dialog-buttonpane {
     .ui-dialog-buttonset {
       button:first-child {
@@ -723,11 +866,13 @@ form fieldset > ol > li fieldset ol li {
         color: #ffffff;
         font-weight: 400;
         padding: 10px 20px;
+
         &:hover {
-          background-image: none!important;
-          background-color: lighten( $skinMainSecondColor, 5% )!important;
+          background-image: none !important;
+          background-color: lighten($skinMainSecondColor, 5%) !important;
         }
       }
+
       button:last-child {
         background-image: none;
         box-shadow: none;
@@ -737,14 +882,16 @@ form fieldset > ol > li fieldset ol li {
         @include rounded($skinBorderRadius);
         padding: 9px 20px 9px 20px;
         border-color: #E4E4E4;
+
         &:hover {
-          background-image: none!important;
-          background-color: #F4F4F4!important;
+          background-image: none !important;
+          background-color: #F4F4F4 !important;
         }
       }
     }
   }
 }
+
 .ui-widget-overlay {
   background: rgba(0, 0, 0, 0.7);
 }
@@ -769,6 +916,7 @@ input[type='radio'] {
     margin: 20% auto;
     border-radius: 50%;
   }
+
   &:checked:before {
     background: $skinMainSecondColor;
   }
